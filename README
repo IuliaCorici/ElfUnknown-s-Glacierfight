@@ -1,0 +1,31 @@
+CORICI IULIA-STEFANIA 314CA
+
+Dupa ce am deschis fisierele de intrare si iesire pentru a citi datele
+de intrare, am alocat dinamic harta ghetarului si vectorul de spiridusi,
+precum si numele lor. Mai departe se verifica ce spiridus ramane pe ghetar
+si se citesc comenzile pentru ei pe rand. Prin intermediul functiilor 
+"muta_elf", "furtuna", "tablascor","batalie","topire" am executat comenzile.
+Apoi se afiseaza castigatorul si se elibereaza memoria.
+
+functia "muta_elf" - cat timp mai e cel putin un elf pe ghetar, se simuleaza 
+mutarea elfului, care se verifica ca nu s-a udat, in directia indicata, iar 
+daca nu se gaseste pe ghetar inseamna ca elful a cazut de pe ghetar (iar
+numarul elfilor in viata scade si s-a udat). Daca are stamina mai mare decat 
+diferenta de altitudine se exeuta mutarea si se ia manusile
+
+functia "batalie"- daca nu e acelasi elf si se afla in aceeasi casuta cu alt 
+elf si nu e ud cel care intra in casuta se desfasoara batalia intre cei doi, 
+se mareste numarul de invinsi daca castiga unul din ei, precum si stamina si se afiseaza mesaj corespunzator
+
+functia "furtuna"- se obtin componentele comenzii prin shiftare, si se scade
+valoarea de uscare a spiridusilor aflati in raza R a ghetarului, cei care cad 
+de pe ghetar in urma modificarii razei mor daca se uda si se afiseaza
+mesaj corespunzator
+
+functia "tabela_scor" - stabileste o separare a spiridusilor uzi si uscati prin
+sortarea prin selectie si se stabileste un prag intre ei, apoi ii ordoneaza in
+functie de cati spiridusi au invins fiecare
+
+functia "topire"- stabileste daca prin micsoarea razei elful a cazut de pe 
+ghetar si primesc energie ce care au supravietuit si se modifica pozitia
+elfului in urma modificarii razei
